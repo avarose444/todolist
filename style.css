@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  background: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  line-height: 1.4;
+}
+
+.app {
+  max-width: 720px;
+  width: 92%;
+  margin: 50px auto 64px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px 20px 16px;
+}
+
+h1, h2 { font-weight: bold; }
+h1 { font-size: 2em; margin: 0 0 10px; text-align: center; }
+.section-title { font-size: 1.17em; text-align: center; margin: 18px 0 10px; }
+
+select, input, .due-date { font-size: 1em; }
+.actions button { font-size: 13px; }
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.add-teammate {
+  display: flex;
+  gap: 10px;
+}
+.add-teammate input {
+  flex: 1;
+}
+
+.add-assignee {
+  display: flex;
+  gap: 10px;
+}
+.add-assignee select {
+  width: 140px;
+}
+.add-assignee input[type="text"] {
+  flex: 1;
+}
+.add-assignee input[type="date"] {
+  width: 160px;
+}
+
+input[type="text"], input[type="date"], select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+}
+
+.empty-tasks{
+  text-align: center;
+  color: gray;
+  padding: 20px 0;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 10px 0 16px;
+}
+
+.btn {
+  padding: 0 14px;
+  height: 40px;
+  line-height: 40px;
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.btn-primary { background: #007bff; }
+.btn-primary:hover { background: #0056b3; }
+
+.btn-green { background: #64d05e; }
+.btn-green:hover { background: #4ea649; }
+
+.btn-gray { background: #c3c3c3; color: #111; }
+.btn-gray:hover { background: #8f8f8f; color: #fff; }
+
+.add-teammate .btn,
+.add-assignee .btn {
+  flex: 0 0 84px;
+  padding: 0;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 12px;
+  margin-top: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.actions .btn {
+  height: 28px;
+  line-height: 28px;
+  padding: 0 12px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+.actions .btn-gray { color: #111; }
+.actions .btn-gray:hover { color: #fff; }
+
+
+/* === Lists area === */
+#lists { margin-top: 6px; }
+
+/* Section heading centered + subtle separators between teammates */
+.teammate { margin: 18px 0 24px; }
+.teammate + .teammate { border-top: 1px solid #eee; padding-top: 16px; }
+.teammate h2 {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 12px 0 14px;
+}
+
+.task-list { list-style: none; margin: 0; padding: 0; }
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  margin: 12px 0;
+  background: #f8f9fa;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+
+.task .txt {
+  flex: 1 1 auto;
+  font-size: 16px;
+  color: #222;
+}
+.task .due {
+  flex: 0 0 auto;
+  min-width: 130px;
+  text-align: right;
+  color: #444;
+  font-weight: 600;
+}
+
+.task.completed .txt { text-decoration: line-through; opacity: 0.65; }

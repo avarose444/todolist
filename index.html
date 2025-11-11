@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> <!-- jQuery library, if loaded in header you have to use document ready or put at bottom of doc -->
+  <script src="main.js"></script>
+</head>
+<body>
+  <div class="app">
+    <div class="header">
+      <h1>To-Do List</h1>
+    </div>
+
+    <div class="toolbar">
+      <div class="add-teammate">
+        <input id="teammate" type="text" placeholder="Teammate Name" />
+        <button class="btn btn-primary" type="button" id="addButton">Add</button> <!-- all event listeners need a unique ID-->
+      </div>
+
+      <div class="add-assignee">
+        <select id="assignee">
+          <option disabled selected value> Assign To </option>
+          <!--<option selected>Leo</option> -->
+          <!--<option>Arnavi</option>
+          <option>Laura</option> -->
+        </select>
+        <input id="taskText" type="text" placeholder="Task" />
+        <input id="dueDate" type="date"/>
+        <button class="btn btn-primary" type="button" id="assignButton">Assign</button>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div id="lists"></div> <!-- where the task lists will go -->
+
+    <div class="empty-tasks">
+      No tasks right now. Please add a teammate and assign a task.
+    </div>
+
+  
+    <div class="footer">
+      <div class="actions">
+        <button class="btn btn-green" type="button" id="completeButton">Clear Completed</button>
+        <button class="btn btn-gray" type="button" id="resetButton">Reset</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
