@@ -1,2 +1,2 @@
 # todolist
-Front-end to-do list app built with HTML, CSS, and jQuery featuring dynamic teammate assignment, localStorage persistence, and responsive interface.
+A clean, interactive to-do list interface designed for small-team collaboration with task sorting, due dates, and local save functionality.
